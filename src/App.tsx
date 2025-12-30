@@ -6,21 +6,21 @@ import clsx from 'clsx';
 
 // Constants & Assets
 const ASSETS = {
-  texture: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767103848/bg-texture.jpg",
-  heroPortal: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767103856/hero-portal.jpg",
-  logoWhite: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767103857/logo-white.png",
-  logoColor: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767103862/logo-color.png",
+  texture: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767103848/bg-texture.jpg",
+  heroPortal: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767103856/hero-portal.jpg",
+  logoWhite: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767103857/logo-white.png",
+  logoColor: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767103862/logo-color.png",
   places: {
-    shirdi: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767105336/place-shirdi.jpg",
-    shani: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767105339/place-shani.jpg",
-    dattatreya: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767105303/place-dattatreya.jpg",
-    brahmagiri: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767105328/place-brahmagiri.jpg",
-    trimbakeshwar: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767105306/place-trimbakeshwar.jpg"
+    shirdi: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767105336/place-shirdi.jpg",
+    shani: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767105339/place-shani.jpg",
+    dattatreya: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767105303/place-dattatreya.jpg",
+    brahmagiri: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767105328/place-brahmagiri.jpg",
+    trimbakeshwar: "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767105306/place-trimbakeshwar.jpg"
   },
   brochure: [
-    "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767103870/4d2b7fdb-4363-4e67-bfca-16e8bf332ba7.png",
-    "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767103842/4f74f8aa-a321-4132-abdc-a00ce15378da.png",
-    "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767103860/5132a9e1-4c66-4a71-a5cc-085e894dcf97.png"
+    "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767103870/4d2b7fdb-4363-4e67-bfca-16e8bf332ba7.png",
+    "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767103842/4f74f8aa-a321-4132-abdc-a00ce15378da.png",
+    "https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767103860/5132a9e1-4c66-4a71-a5cc-085e894dcf97.png"
   ]
 };
 
@@ -377,7 +377,7 @@ function App() {
           >
             {/* New Background Image: Majestic Tree - Full coverage of this section */}
             <div className="absolute inset-0 z-0">
-              <img src="https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767108254/sacred-tree-circle-meditation.jpg" className="w-full h-full object-cover opacity-60 mix-blend-overlay" />
+              <img src="https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767108254/sacred-tree-circle-meditation.jpg" className="w-full h-full object-cover opacity-60 mix-blend-overlay" />
               <div className="absolute inset-0 bg-gradient-to-t from-[#1a1512] via-[#1a1512]/60 to-transparent"></div>
               <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#1a1512]/80"></div>
             </div>
