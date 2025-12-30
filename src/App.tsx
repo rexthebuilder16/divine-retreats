@@ -370,41 +370,63 @@ function App() {
           <p className="text-xl text-white/40 mb-12 max-w-2xl mx-auto">This invitation is for 12 souls only. Secure your place in the circle.</p>
 
           <motion.div
-            whileHover={{ scale: 1.01 }}
-            className="bg-paper/5 backdrop-blur-md border border-white/10 p-10 md:p-16 relative rounded-sm overflow-hidden group"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="relative rounded-sm overflow-hidden group py-16 px-6"
           >
-            {/* New Background Image: People sitting under tree */}
-            <div className="absolute inset-0 z-0 opacity-20 hidden md:block">
-              <img src="https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767108254/sacred-tree-circle-meditation.jpg" className="w-full h-full object-cover mix-blend-overlay opacity-50" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1512] via-[#1a1512]/80 to-transparent"></div>
+            {/* New Background Image: Majestic Tree - Full coverage of this section */}
+            <div className="absolute inset-0 z-0">
+              <img src="https://res.cloudinary.com/cms-strapi-backend-files/image/upload/v1767108254/sacred-tree-circle-meditation.jpg" className="w-full h-full object-cover opacity-60 mix-blend-overlay" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1512] via-[#1a1512]/60 to-transparent"></div>
+              <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#1a1512]/80"></div>
             </div>
 
-            <div className="absolute inset-0 bg-gold/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-            <div className="absolute top-0 right-0 bg-gold text-ink font-bold px-8 py-3 text-sm uppercase shadow-lg z-10">Limited Spots</div>
+            <div className="relative z-10 flex flex-col items-center">
 
-            <div className="flex flex-col md:flex-row gap-12 justify-center items-end mb-12 relative z-10">
-              <div className="text-center opacity-60 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100">
-                <p className="text-sm uppercase tracking-widest mb-1 line-through">Full Package</p>
-                <div className="text-4xl md:text-5xl font-heading text-paper line-through decoration-red-500/50">$1200</div>
-              </div>
-              <div className="text-center scale-110">
-                <p className="text-gold font-bold text-sm uppercase tracking-widest mb-2 animate-pulse">Early Bird Offer</p>
-                <div className="text-7xl md:text-9xl font-heading text-gold text-glow leading-none">$950</div>
-                <p className="text-red-400 font-bold mt-4 uppercase tracking-[0.2em] text-xs border border-red-400/30 px-3 py-1 rounded-full inline-block">Ends Jan 7, 2026</p>
-              </div>
-            </div>
+              {/* Money Square - The Pricing Card */}
+              <motion.div
+                whileHover={{ scale: 1.02 }}
+                className="bg-[#1a1512]/40 backdrop-blur-md border border-gold/30 p-8 md:p-12 text-center rounded-lg shadow-[0_0_40px_rgba(0,0,0,0.5)] max-w-3xl mx-auto mb-10 relative overflow-hidden"
+              >
+                <div className="absolute top-0 right-0 bg-gold text-ink font-bold px-6 py-2 text-xs uppercase shadow-lg">Limited Spots</div>
 
-            <p className="text-paper/60 italic mb-10 max-w-xl mx-auto text-sm border-t border-white/10 pt-6 relative z-10">
-              Inclusive of airport pickup/drop in Mumbai, all meals, stays, and entry permits.
-            </p>
+                <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-end">
+                  <div className="text-center opacity-60 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100">
+                    <p className="text-xs uppercase tracking-widest mb-1 line-through text-paper/70">Full Package</p>
+                    <div className="text-3xl md:text-4xl font-heading text-paper line-through decoration-red-500/50">$1200</div>
+                  </div>
+                  <div className="text-center scale-110">
+                    <p className="text-gold font-bold text-xs uppercase tracking-widest mb-2 animate-pulse">Early Bird Offer</p>
+                    <div className="text-6xl md:text-8xl font-heading text-gold text-glow leading-none">$950</div>
+                    <p className="text-red-400 font-bold mt-4 uppercase tracking-[0.2em] text-[10px] border border-red-400/30 px-3 py-1 rounded-full inline-block bg-black/20">Ends Jan 7, 2026</p>
+                  </div>
+                </div>
 
-            <div className="space-y-6 relative z-10">
-              <a href="https://wa.me/918928539254?text=SAI%20-%20Reviewing%20Brochure" className="block w-full max-w-2xl mx-auto bg-gradient-to-r from-gold via-[#eac575] to-gold text-ink uppercase tracking-[0.2em] font-bold py-6 hover:shadow-[0_0_50px_rgba(212,160,77,0.6)] transition-all duration-300 rounded-sm">
-                DM 'SAI' to Reserve via WhatsApp
-              </a>
-              <div className="flex flex-col md:flex-row justify-center gap-8 text-sm opacity-60 mt-8 font-heading tracking-wider">
-                <span className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> Divya: +91 89285 39254</span>
-                <span className="flex items-center gap-2"><div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" /> Tanu: +971 56 4404204 / +91 89555 93913</span>
+                <p className="text-paper/80 italic mt-8 text-sm md:text-base border-t border-white/10 pt-6">
+                  Inclusive of airport pickup/drop in Mumbai, all meals, stays, and entry permits.
+                </p>
+              </motion.div>
+
+              {/* The "Secretary URL" / CTA - Outside the Money Square */}
+              <div className="w-full max-w-2xl mx-auto space-y-8 text-center">
+                <p className="text-xl md:text-2xl font-heading text-paper/90 drop-shadow-md">
+                  Ready to join the circle?
+                </p>
+
+                <a href="https://wa.me/918928539254?text=SAI%20-%20Reviewing%20Brochure" className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-gold via-[#eac575] to-gold text-ink uppercase tracking-[0.2em] font-bold py-6 hover:shadow-[0_0_50px_rgba(212,160,77,0.8)] transition-all duration-300 rounded-sm overflow-hidden">
+                  <span className="relative z-10 flex items-center gap-3">
+                    <span className="text-lg">✧</span>
+                    DM 'SAI' to Reserve via WhatsApp
+                    <span className="text-lg">✧</span>
+                  </span>
+                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+                </a>
+
+                <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-sm text-paper/60 font-heading tracking-wider">
+                  <span className="flex items-center gap-2 justify-center"><div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]" /> Divya: +91 89285 39254</span>
+                  <span className="flex items-center gap-2 justify-center"><div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]" /> Tanu: +971 56 4404204</span>
+                </div>
               </div>
             </div>
           </motion.div>
