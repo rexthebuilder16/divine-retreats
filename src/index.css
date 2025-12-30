@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+:root {
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Alegreya Sans', sans-serif;
+  --font-script: 'Great Vibes', cursive;
+
+  --c-paper-base: #f4ecdf;
+  --c-paper-dark: #e8dbc3;
+  --c-ink: #2c1810;
+  --c-gold: #d4a04d;
+}
+
+@theme {
+  --color-paper: var(--c-paper-base);
+  --color-paper-dark: var(--c-paper-dark);
+  --color-ink: var(--c-ink);
+  --color-gold: var(--c-gold);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+  --font-script: var(--font-script);
+}
+
+body {
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+@layer utilities {
+  .clip-path-slant-right {
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+  }
+
+  .text-ink-bleed {
+    text-shadow: 0.5px 0.5px 0px rgba(44, 24, 16, 0.15);
+  }
+
+  .text-gold-glow {
+    text-shadow: 0 0 15px rgba(212, 160, 77, 0.5);
+  }
+}
