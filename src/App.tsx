@@ -360,81 +360,87 @@ function App() {
         </div>
       </Section>
 
-      {/* Footer / CTA (Refined) */}
-      <footer id="register" className="bg-[#1a1512] text-paper pt-32 pb-16 px-6 relative overflow-hidden clip-path-slant-top">
-        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-50"></div>
+      {/* Footer / CTA (Refined 'Bigger Box' & Dual CTAs) */}
+      <footer id="register" className="bg-[#1a1512] text-paper min-h-screen relative overflow-hidden flex flex-col justify-center">
+        {/* Full Background Image: Sacred Tree */}
+        <div className="absolute inset-0 z-0">
+          <img src="https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767108254/sacred-tree-circle-meditation.jpg" className="w-full h-full object-cover opacity-50 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1a1512] via-[#1a1512]/40 to-transparent"></div>
+          <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#1a1512]/90"></div>
+        </div>
 
-        <div className="max-w-4xl mx-auto text-center relative z-10">
+        <div className="absolute top-0 left-0 w-full h-[2px] bg-gradient-to-r from-transparent via-gold to-transparent opacity-50 z-10"></div>
+
+        <div className="max-w-5xl mx-auto text-center relative z-10 px-6 py-20 w-full">
           <Scroll className="w-20 h-20 text-gold mx-auto mb-10 opacity-80" />
-          <h2 className="font-heading text-5xl md:text-7xl mb-6">Join The Circle</h2>
-          <p className="text-xl text-white/40 mb-12 max-w-2xl mx-auto">This invitation is for 12 souls only. Secure your place in the circle.</p>
+          <h2 className="font-heading text-5xl md:text-8xl mb-6 drop-shadow-2xl">Join The Circle</h2>
+          <p className="text-xl md:text-2xl text-white/60 mb-16 max-w-3xl mx-auto font-body">
+            This invitation is for 12 souls only. Secure your place in the living portal.
+          </p>
 
+          {/* Pricing Card - Floating Glass */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="relative rounded-sm overflow-hidden group py-16 px-6"
+            whileHover={{ scale: 1.02 }}
+            className="bg-[#1a1512]/60 backdrop-blur-xl border border-gold/20 p-8 md:p-14 text-center rounded-sm shadow-[0_20px_50px_rgba(0,0,0,0.5)] max-w-3xl mx-auto mb-16 relative overflow-hidden"
           >
-            {/* New Background Image: Majestic Tree - Full coverage of this section */}
-            <div className="absolute inset-0 z-0">
-              <img src="https://res.cloudinary.com/cms-strapi-backend-files/image/upload/f_auto,q_auto/v1767108254/sacred-tree-circle-meditation.jpg" className="w-full h-full object-cover opacity-60 mix-blend-overlay" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1a1512] via-[#1a1512]/60 to-transparent"></div>
-              <div className="absolute inset-0 bg-radial-gradient from-transparent to-[#1a1512]/80"></div>
-            </div>
+            <div className="absolute top-0 right-0 bg-gold text-ink font-bold px-6 py-2 text-xs uppercase shadow-lg">Limited Spots</div>
 
-            <div className="relative z-10 flex flex-col items-center">
-
-              {/* Money Square - The Pricing Card */}
-              <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="bg-[#1a1512]/40 backdrop-blur-md border border-gold/30 p-8 md:p-12 text-center rounded-lg shadow-[0_0_40px_rgba(0,0,0,0.5)] max-w-3xl mx-auto mb-10 relative overflow-hidden"
-              >
-                <div className="absolute top-0 right-0 bg-gold text-ink font-bold px-6 py-2 text-xs uppercase shadow-lg">Limited Spots</div>
-
-                <div className="flex flex-col md:flex-row gap-8 md:gap-12 justify-center items-end">
-                  <div className="text-center opacity-60 grayscale transition-all duration-500 hover:grayscale-0 hover:opacity-100">
-                    <p className="text-xs uppercase tracking-widest mb-1 line-through text-paper/70">Full Package</p>
-                    <div className="text-3xl md:text-4xl font-heading text-paper line-through decoration-red-500/50">$1200</div>
-                  </div>
-                  <div className="text-center scale-110">
-                    <p className="text-gold font-bold text-xs uppercase tracking-widest mb-2 animate-pulse">Early Bird Offer</p>
-                    <div className="text-6xl md:text-8xl font-heading text-gold text-glow leading-none">$950</div>
-                    <p className="text-red-400 font-bold mt-4 uppercase tracking-[0.2em] text-[10px] border border-red-400/30 px-3 py-1 rounded-full inline-block bg-black/20">Ends Jan 7, 2026</p>
-                  </div>
-                </div>
-
-                <p className="text-paper/80 italic mt-8 text-sm md:text-base border-t border-white/10 pt-6">
-                  Inclusive of airport pickup/drop in Mumbai, all meals, stays, and entry permits.
-                </p>
-              </motion.div>
-
-              {/* The "Secretary URL" / CTA - Outside the Money Square */}
-              <div className="w-full max-w-2xl mx-auto space-y-8 text-center">
-                <p className="text-xl md:text-2xl font-heading text-paper/90 drop-shadow-md">
-                  Ready to join the circle?
-                </p>
-
-                <a href="https://wa.me/918928539254?text=SAI%20-%20Reviewing%20Brochure" className="group relative inline-flex items-center justify-center w-full bg-gradient-to-r from-gold via-[#eac575] to-gold text-ink uppercase tracking-[0.2em] font-bold py-6 hover:shadow-[0_0_50px_rgba(212,160,77,0.8)] transition-all duration-300 rounded-sm overflow-hidden">
-                  <span className="relative z-10 flex items-center gap-3">
-                    <span className="text-lg">✧</span>
-                    DM 'SAI' to Reserve via WhatsApp
-                    <span className="text-lg">✧</span>
-                  </span>
-                  <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
-                </a>
-
-                <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-12 text-sm text-paper/60 font-heading tracking-wider">
-                  <span className="flex items-center gap-2 justify-center"><div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]" /> Divya: +91 89285 39254</span>
-                  <span className="flex items-center gap-2 justify-center"><div className="w-2 h-2 bg-green-500 rounded-full animate-pulse shadow-[0_0_10px_#22c55e]" /> Tanu: +971 56 4404204</span>
-                </div>
+            <div className="flex flex-col md:flex-row gap-8 md:gap-16 justify-center items-end">
+              <div className="text-center opacity-50 hover:opacity-100 transition-opacity">
+                <p className="text-xs uppercase tracking-widest mb-1 line-through text-white/50">Full Package</p>
+                <div className="text-3xl md:text-4xl font-heading text-white/50 line-through decoration-red-500/50">$1200</div>
+              </div>
+              <div className="text-center transform md:scale-110">
+                <p className="text-gold font-bold text-xs uppercase tracking-widest mb-2 animate-pulse">Early Bird Offer</p>
+                <div className="text-7xl md:text-9xl font-heading text-gold text-glow leading-none">$950</div>
+                <p className="text-red-400 font-bold mt-4 uppercase tracking-[0.2em] text-[10px] border border-red-400/30 px-3 py-1 rounded-full inline-block bg-black/20">Ends Jan 7, 2026</p>
               </div>
             </div>
+
+            <p className="text-white/40 italic mt-8 text-sm border-t border-white/5 pt-6">
+              Inclusive of airport pickup/drop in Mumbai, all meals, stays, and entry permits.
+            </p>
           </motion.div>
 
-          <p className="mt-16 opacity-40 text-sm tracking-widest">© 2025 Divine Downloads • All rights reserved</p>
+          {/* Dual CTA Buttons */}
+          <div className="w-full max-w-4xl mx-auto">
+            <p className="text-2xl font-heading text-paper/90 drop-shadow-md mb-8">
+              Connect with us to Apply
+            </p>
 
-          <div className="mt-16 flex justify-center gap-8 opacity-60 hover:opacity-100 transition-opacity">
-            <img src={ASSETS.logoColor} className="h-24 grayscale hover:grayscale-0 transition-all duration-500 will-change-transform hover:scale-105" alt="Footer Logo" />
+            <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-8 mb-12">
+              <a href="https://wa.me/918928539254?text=SAI%20-%20Reviewing%20Brochure" className="group relative flex-1 bg-gradient-to-r from-gold via-[#eac575] to-gold text-ink uppercase tracking-[0.15em] font-bold py-5 px-8 hover:shadow-[0_0_30px_rgba(212,160,77,0.6)] transition-all duration-300 rounded-sm overflow-hidden text-center md:max-w-sm ml-auto">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <span>💬</span> Text Divya
+                </span>
+                <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              </a>
+
+              <a href="https://wa.me/971564404204?text=SAI%20-%20Reviewing%20Brochure" className="group relative flex-1 border border-gold text-gold hover:bg-gold hover:text-ink uppercase tracking-[0.15em] font-bold py-5 px-8 hover:shadow-[0_0_30px_rgba(212,160,77,0.4)] transition-all duration-300 rounded-sm overflow-hidden text-center md:max-w-sm mr-auto bg-black/40 backdrop-blur-sm">
+                <span className="relative z-10 flex items-center justify-center gap-2">
+                  <span>💬</span> Text Tanu
+                </span>
+              </a>
+            </div>
+
+            <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-xs md:text-sm text-paper/40 font-heading tracking-wider">
+              <div className="flex flex-col items-center gap-1">
+                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_5px_#22c55e]" /> Divya</span>
+                <span className="opacity-70">+91 89285 39254</span>
+              </div>
+              <div className="flex flex-col items-center gap-1">
+                <span className="flex items-center gap-2"><div className="w-1.5 h-1.5 bg-green-500 rounded-full animate-pulse shadow-[0_0_5px_#22c55e]" /> Tanu</span>
+                <span className="opacity-70">+971 56 4404204</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-24 opacity-30 hover:opacity-100 transition-opacity duration-700">
+            <img src={ASSETS.logoColor} className="h-16 md:h-20 grayscale hover:grayscale-0 transition-all mx-auto" alt="Footer Logo" />
+            <p className="mt-4 text-[10px] tracking-[0.3em]">© 2025 Divine Downloads</p>
           </div>
         </div>
       </footer>
